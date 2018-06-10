@@ -30,20 +30,6 @@ def upload_to_offers(_, filename):
     )
 
 
-def upload_to_profiles(_, filename):
-    """
-    Upload to profiles path.
-
-    This needs to be a full-body func because
-    migrations requires it to be serializable.
-    """
-    _, file_extension = os.path.splitext(filename)
-    return os.path.join(
-        'profiles',
-        '{}{}'.format(uuid.uuid4(), file_extension),
-    )
-
-
 class Organization(models.Model):
     """Model that handles ogranizations/institutions."""
     name = models.CharField(max_length=150, db_index=True)
