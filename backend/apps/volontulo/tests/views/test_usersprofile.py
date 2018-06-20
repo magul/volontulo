@@ -105,10 +105,6 @@ class TestUsersProfile(TestCase):
         response = self.client.get('/o/me')
 
         self.assertIn('offers', response.context)
-        self.assertEqual(
-            4,
-            Offer.objects.all().filter(status_old='ACTIVE').count()
-        )
         self.assertNotContains(
             response,
             'Ta organizacja nie utworzyła jeszcze żadnych ofert.'
