@@ -9,7 +9,6 @@ from django.test import Client
 from django.test import TestCase
 
 from apps.volontulo.tests import common
-from apps.volontulo.models import Offer
 
 
 class TestUsersProfile(TestCase):

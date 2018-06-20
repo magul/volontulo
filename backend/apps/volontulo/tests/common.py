@@ -51,7 +51,7 @@ def initialize_filled_volunteer_and_organization():
     )
 
     # create organization offers and assign volunteer to them
-    for i in range(11, 15):
+    for _ in range(11, 15):
         OfferFactory(
             organization=organization2,
             offer_status='published',
@@ -59,7 +59,7 @@ def initialize_filled_volunteer_and_organization():
         )
 
     # create additional organization offers for administrator use
-    for i in range(100, 110):
+    for _ in range(100, 110):
         OfferFactory(
             organization=organization2,
             offer_status='unpublished',
